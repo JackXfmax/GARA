@@ -1,0 +1,36 @@
+# Requirements
+
+Reference versions match the environment in which the reported results were
+produced (Ubuntu 22.04, CUDA 12.1, 2×RTX 4090).
+
+```
+torch>=2.3.0
+transformers>=4.49.0
+peft>=0.19.1
+bitsandbytes>=0.43.0
+accelerate>=0.30.0
+sentence-transformers>=2.7.0
+scikit-learn>=1.4.0
+jieba>=0.42.1
+numpy>=1.26.0
+```
+
+Install:
+
+```bash
+pip install -r requirements.txt
+```
+
+Notes
+-----
+* 4-bit NF4 quantisation requires a CUDA-capable GPU and `bitsandbytes`.
+* Long training runs should disable torch dynamo and limit thread fan-out to
+  avoid `torch.compile` forking child processes and exhausting RAM:
+
+  ```bash
+  export TORCHDYNAMO_DISABLE=1
+  export TOKENIZERS_PARALLELISM=false
+  export OMP_NUM_THREADS=4
+  ```
+* The base model and the similarity model are not redistributed here. Point
+  `GARA_MODEL_PATH` and `GARA_SIM_MODEL_PATH` at local copies.
