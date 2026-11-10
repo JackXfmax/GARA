@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Training artefacts (never released)
+outputs/
+checkpoints/
+runs/
+wandb/
+*.pt
+*.bin
+*.safetensors
+
+# Raw data (never released)
+data/_raw/
+*.jsonl.gz
+results/
+intermediate_*.json
+
+# Logs / OS
+*.log
+nohup.out
+.DS_Store
+Thumbs.db
