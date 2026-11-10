@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "GARA: Gap-Aware Representation Alignment for Wylie-to-Classical-Chinese Translation"
+abstract: >-
+  Code and data for GARA, a parameter-efficient fine-tuning method that pairs
+  LoRA with a lightweight embedding-side Alignment Adapter and a gap-aware
+  dynamic weighting term, applied to translating Tibetan Wylie romanisation
+  into Classical Chinese.
+type: software
+authors:
+  - name: "Tibet University"
+repository-code: "https://github.com/JackXfmax/GARA"
+url: "https://github.com/JackXfmax/GARA"
+license: MIT
+keywords:
+  - parameter-efficient fine-tuning
+  - LoRA
+  - representation alignment
+  - Tibetan
+  - Wylie transliteration
+  - Classical Chinese
+  - machine translation
+preferred-citation:
+  type: article
+  title: "Gap-Aware Representation Alignment for Wylie-to-Classical-Chinese Translation"
+  year: 2026
+  authors:
+    - name: "Tibet University"
